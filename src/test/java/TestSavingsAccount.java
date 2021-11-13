@@ -9,7 +9,7 @@ public class TestSavingsAccount {
 	@Before 
 	public void setUp()
 	{
-		myobj = new SavingsAccount();
+		myobj = new SavingsAccount(1);
 		String [] acc = new String [10];
 		acc[0] = "23456";
 		myobj.setAccountNo(acc, 0);

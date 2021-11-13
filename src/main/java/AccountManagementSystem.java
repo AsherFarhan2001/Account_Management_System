@@ -33,10 +33,23 @@ public class AccountManagementSystem {
         String [] Caddress = new String [Caddsize];
         String [] Cphone = new String [Cphonesize];
         String [] Cdate = new String [Cdatesize];
-        CheckingAccount CA = new CheckingAccount();
-        SavingsAccount SA = new SavingsAccount();
+        //CheckingAccount CA = new CheckingAccount();
+       // SavingsAccount SA = new SavingsAccount();
         double [] bal,bal1;
         String [] acc,acc1;
+        
+        // connecting to Data Base
+        
+        int opt;
+        Scanner input1 = new Scanner (System.in);
+        System.out.println("Press 1 for File ");
+        System.out.println("Press 2 for Oracle Data Base ");
+        opt = input1.nextInt();
+        CheckingAccount CA = new CheckingAccount(opt);
+        SavingsAccount SA = new SavingsAccount(opt);
+        
+        //----------------------------------
+        
         for(int i = 0 ; i < 10 ; i++)
         {
             Sbalance[i] = 0.0;

@@ -10,7 +10,7 @@ public class TestCheckingAccount {
 	@Before
 	public void setUp()
 	{
-		myobj = new CheckingAccount();
+		myobj = new CheckingAccount(1);
 		String [] acc = {"67890","23456","23332","12345","23344","55343","32323","55633","94944","39922"};
 		for(int i=0;i<10;i++)
 		{

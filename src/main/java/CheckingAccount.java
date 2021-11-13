@@ -11,6 +11,19 @@ public class CheckingAccount extends CheckingCustomer implements Screen {
     private double [] Balance = new double [10];
     private int [] DDeduction = new int [10];
     private int [] WDeduction = new int [10];
+    PersistenceHandler handler;
+    
+    public CheckingAccount(int option)
+    {
+    	if(option == 1)
+    	{
+    		handler = new FileHandler();
+    	}
+    	else if(option == 2)
+    	{
+    		handler = new OracleHandler();
+    	}
+    }
     public void setAccountNo(String [] AccNo , int temp1)               // setting checking account no
     {
         this.AccountNo[temp1] = AccNo[temp1];

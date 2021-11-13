@@ -12,6 +12,19 @@ public class SavingsAccount extends SavingsCustomer implements Screen {
     private double [] Balance = new double [5];
     private String [] Date = new String [5];
     private double [] ZDeduction = new double [5];
+    PersistenceHandler handler;
+    
+    public SavingsAccount(int option)
+    {
+    	if(option == 1)
+    	{
+    		handler = new FileHandler();
+    	}
+    	else if(option == 2)
+    	{
+    		handler = new OracleHandler();
+    	}
+    }
     public void setAccountNo(String [] AccNo , int temp1)               // setting checking account no
     {
         this.AccountNo[temp1] = AccNo[temp1];
