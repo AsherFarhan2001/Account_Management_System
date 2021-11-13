@@ -33,8 +33,7 @@ public class AccountManagementSystem {
         String [] Caddress = new String [Caddsize];
         String [] Cphone = new String [Cphonesize];
         String [] Cdate = new String [Cdatesize];
-        //CheckingAccount CA = new CheckingAccount();
-       // SavingsAccount SA = new SavingsAccount();
+        
         double [] bal,bal1;
         String [] acc,acc1;
         
@@ -42,6 +41,7 @@ public class AccountManagementSystem {
         
         int opt;
         Scanner input1 = new Scanner (System.in);
+        System.out.println("Selecting the Data Base ");
         System.out.println("Press 1 for File ");
         System.out.println("Press 2 for Oracle Data Base ");
         opt = input1.nextInt();
